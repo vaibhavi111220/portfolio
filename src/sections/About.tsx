@@ -87,7 +87,8 @@ const About: React.FC = () => {
               {/* Profile image */}
               <div className="relative w-full max-w-md mx-auto">
                 <div className="aspect-square rounded-2xl glass-effect overflow-hidden relative">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20"></div>{" "}                  <img
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20"></div>{" "}
+                  <img
                     src="/portfolio/assets/profile_pic.jpg"
                     alt="Vaibhavi Satish - Business & Data Analyst | Product Management"
                     className="absolute inset-0 w-full h-full object-cover object-center"
