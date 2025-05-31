@@ -59,8 +59,8 @@ export const personalInfo: PersonalInfo = {
   name: "Vaibhavi Satish",
   title: "Business & Data Analyst | Product Management",
   email: "vaibhavisatish20@gmail.com",
-  phone: "(843) 940-3861",
-  location: "Greenville, South Carolina (Willing to Relocate)",
+  phone: "(940) 843-3861",
+  location: "USA",
   linkedin: "https://www.linkedin.com/in/vaibhavisatish/",
   github: "https://github.com/vaibhavi111220", // Assuming the same GitHub URL as before
   website: "https://vaibhavisatish1.wixsite.com/my-site",
