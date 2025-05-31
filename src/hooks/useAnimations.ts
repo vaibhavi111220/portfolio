@@ -5,7 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export const useScrollAnimation = (
-  trigger: string,
+  _trigger: string,
   animation: string = "fadeUp"
 ) => {
   const ref = useRef<HTMLElement>(null);

@@ -118,3 +118,10 @@ export const initializeAnalytics = (): void => {
     });
   });
 };
+
+// Declare gtag as a global function for TypeScript
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+declare global {
+  // eslint-disable-next-line no-var
+  var gtag: any;
+}
