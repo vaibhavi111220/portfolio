@@ -83,7 +83,7 @@ const SEO: React.FC<SEOProps> = ({
     if (!structuredDataScript) {
       structuredDataScript = document.createElement('script');
       structuredDataScript.id = 'structured-data';
-      structuredDataScript.type = 'application/ld+json';
+      (structuredDataScript as HTMLScriptElement).type = 'application/ld+json';
       document.head.appendChild(structuredDataScript);
     }
     structuredDataScript.textContent = JSON.stringify(structuredData);

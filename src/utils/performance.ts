@@ -56,13 +56,14 @@ export const getWebVitals = (): void => {
   // Core Web Vitals monitoring
   new PerformanceObserver((entryList) => {
     for (const entry of entryList.getEntries()) {
-      console.log('Web Vital:', entry.name, entry.value);
+      console.log('Web Vital:', entry.name, (entry as any).value);
     }
   }).observe({ entryTypes: ['measure', 'navigation', 'paint'] });
 };
 
 export const reportWebVitals = (onPerfEntry?: (metric: any) => void): void => {
   if (onPerfEntry && onPerfEntry instanceof Function) {
+    // @ts-expect-error: web-vitals types may not be available
     import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
       getCLS(onPerfEntry);
       getFID(onPerfEntry);
