@@ -1,7 +1,7 @@
-import React, { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
-import { personalInfo } from '../data/resumeData';
-import { useSmoothScroll } from '../hooks/useSmoothScroll';
+import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { personalInfo } from "../data/resumeData";
+import { useSmoothScroll } from "../hooks/useSmoothScroll";
 
 const Hero: React.FC = () => {
   const titleRef = useRef<HTMLHeadingElement>(null);
@@ -11,24 +11,27 @@ const Hero: React.FC = () => {
 
   useEffect(() => {
     const tl = gsap.timeline({ delay: 0.5 });
-    
+
     // Animate title
-    tl.fromTo(titleRef.current, 
+    tl.fromTo(
+      titleRef.current,
       { opacity: 0, y: 50 },
-      { opacity: 1, y: 0, duration: 1, ease: 'power3.out' }
+      { opacity: 1, y: 0, duration: 1, ease: "power3.out" }
     )
-    // Animate subtitle
-    .fromTo(subtitleRef.current,
-      { opacity: 0, y: 30 },
-      { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' },
-      '-=0.5'
-    )
-    // Animate CTA buttons
-    .fromTo(ctaRef.current,
-      { opacity: 0, y: 20 },
-      { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' },
-      '-=0.3'
-    );
+      // Animate subtitle
+      .fromTo(
+        subtitleRef.current,
+        { opacity: 0, y: 30 },
+        { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" },
+        "-=0.5"
+      )
+      // Animate CTA buttons
+      .fromTo(
+        ctaRef.current,
+        { opacity: 0, y: 20 },
+        { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" },
+        "-=0.3"
+      );
 
     return () => {
       tl.kill();
@@ -36,29 +39,32 @@ const Hero: React.FC = () => {
   }, []);
   const handleDownloadResume = () => {
     // Download the actual resume file from the public assets folder
-    const link = document.createElement('a');
-    link.href = '/assets/Resume 2025_Vaibhavi_Satish_.pdf';
-    link.download = 'Vaibhavi_Satish_Resume.pdf';
+    const link = document.createElement("a");
+    link.href = "/portfolio/assets/Resume 2025_Vaibhavi_Satish_.pdf";
+    link.download = "Vaibhavi_Satish_Resume.pdf";
     link.click();
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section
+      id="home"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden"
+    >
       <div className="container-custom text-center z-10">
         <div className="max-w-4xl mx-auto">
           {/* Main Title */}
-          <h1 
+          <h1
             ref={titleRef}
             className="text-4xl sm:text-6xl lg:text-7xl font-bold mb-6 opacity-0"
           >
-            Hi, I'm{' '}
+            Hi, I'm{" "}
             <span className="gradient-text">
-              {personalInfo.name.split(' ')[0]}
+              {personalInfo.name.split(" ")[0]}
             </span>
           </h1>
 
           {/* Subtitle */}
-          <p 
+          <p
             ref={subtitleRef}
             className="text-xl sm:text-2xl lg:text-3xl text-gray-300 mb-8 opacity-0"
           >
@@ -71,12 +77,12 @@ const Hero: React.FC = () => {
           </p>
 
           {/* CTA Buttons */}
-          <div 
+          <div
             ref={ctaRef}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center opacity-0"
           >
             <button
-              onClick={() => scrollToSection('projects')}
+              onClick={() => scrollToSection("projects")}
               className="group px-8 py-4 bg-gradient-to-r from-primary to-secondary text-white font-semibold rounded-full hover:shadow-lg hover:shadow-primary/25 transform hover:scale-105 transition-all duration-300"
             >
               View My Work
@@ -84,7 +90,7 @@ const Hero: React.FC = () => {
                 →
               </span>
             </button>
-            
+
             <button
               onClick={handleDownloadResume}
               className="px-8 py-4 border-2 border-gray-400 text-gray-300 font-semibold rounded-full hover:border-white hover:text-white hover:shadow-lg transform hover:scale-105 transition-all duration-300"
