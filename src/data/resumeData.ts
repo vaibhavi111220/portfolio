@@ -71,8 +71,8 @@ export const personalInfo: PersonalInfo = {
 export const experiences: Experience[] = [
   {
     id: "1",
-    title: "Product Data Analyst",
-    company: "Board of Pharmacy, State of West Virginia",
+    title: "Data Analyst",
+    company: "Mahantech Corp (Contract)",
     location: "Remote, USA",
     startDate: "07/2024",
     endDate: "Present",
@@ -103,7 +103,7 @@ export const experiences: Experience[] = [
   },
   {
     id: "2",
-    title: "Product & Data Analyst (Intern)",
+    title: "Data Analyst (Intern)",
     company: "British Airways",
     location: "Dallas, Texas",
     startDate: "01/2024",
