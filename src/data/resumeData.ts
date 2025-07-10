@@ -75,7 +75,7 @@ export const experiences: Experience[] = [
     company: "Mahantech Corp (Contract)",
     location: "Remote, USA",
     startDate: "07/2024",
-    endDate: "Present",
+    endDate: "07/2025",
     description: [
       "Led product development for a pharmacy compliance platform using Six Sigma principles, including DMAIC and root cause analysis, to identify inefficiencies, gather stakeholder requirements, and translate them into actionable features—resulting in a 42% boost in user satisfaction.",
       "Engineered Python scripts in Databricks notebooks to automate ingestion of 50K+ monthly pharmacy records, reducing pipeline runtime by 35% while ensuring HIPAA and pharmacy compliance",
