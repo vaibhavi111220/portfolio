@@ -71,13 +71,13 @@ export const personalInfo: PersonalInfo = {
 export const experiences: Experience[] = [
   {
     id: "1",
-    title: "Data Analyst",
+    title: "Business Data Analyst",
     company: "Mahantech Corp (Contract)",
     location: "Remote, USA",
     startDate: "07/2024",
     endDate: "Present",
     description: [
-      "Led product development initiatives for a pharmacy compliance platform, gathering requirements from stakeholders and translating them into actionable features that improved user satisfaction by 42%",
+      "Led product development for a pharmacy compliance platform using Six Sigma principles, including DMAIC and root cause analysis, to identify inefficiencies, gather stakeholder requirements, and translate them into actionable features—resulting in a 42% boost in user satisfaction.",
       "Engineered Python scripts in Databricks notebooks to automate ingestion of 50K+ monthly pharmacy records, reducing pipeline runtime by 35% while ensuring HIPAA and pharmacy compliance",
       "Applied data modeling for efficient querying, enabling 10 Tableau dashboards for real-time anomaly tracking and cutting manual reporting by 40%",
       "Deployed Databricks Workflows for end-to-end compliance checks, slashing inspection delays from 14 to 5 days and reducing submission errors by 30% to meet financial standards",
