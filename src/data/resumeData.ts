@@ -57,7 +57,7 @@ export interface PersonalInfo {
 
 export const personalInfo: PersonalInfo = {
   name: "Vaibhavi Satish",
-  title: "Business & Data Analyst | Product Management",
+  title: "Business & Data Analyst | Process Improvement ",
   email: "vaibhavisatish20@gmail.com",
   phone: "(940) 843-3861",
   location: "USA",
