@@ -342,9 +342,9 @@ export const projects: Project[] = [
 
 export const skills: Skill[] = [
   {
-    category: "Product Management",
+    category: "Project Management",
     items: [
-      "Product Roadmapping",
+      "Project Roadmapping",
       "User Research",
       "A/B Testing",
       "Product Requirements Documents",
@@ -353,7 +353,7 @@ export const skills: Skill[] = [
       "Journey Mapping",
       "Competitive Analysis",
       "Feature Prioritization",
-      "Product Strategy",
+      "Project Strategy",
       "Product Analytics",
       "Product Lifecycle Management",
     ],
