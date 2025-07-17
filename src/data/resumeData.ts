@@ -319,9 +319,25 @@ export const projects: Project[] = [
       "Frontend Development",
     ],
     featured: false,
-  },
+  },  
   {
-    id: "6",
+  id: "6",
+  title: "Netflix Universe Explorer Dashboard",
+  description:
+    "Developed an interactive Power BI dashboard analyzing Netflix's 8,000+ title library, revealing content patterns across 16 genres and 10 years of streaming data. Created comprehensive visualizations showing rating distributions, geographic content mapping, and genre trends that enhanced data storytelling capabilities by transforming raw Netflix data into actionable insights.",
+  technologies: [
+    "Power BI",
+    "Data Visualization",
+    "Business Intelligence",
+    "Data Analysis",
+    "Dashboard Design",
+    "Interactive Charts"
+  ],
+  featured: true,
+  githubUrl: "https://github.com/vaibhavi111220/netflix--Power-BI-Dashboard",
+  }
+  {
+    id: "7",
     title: "Academic Performance Analytics",
     description:
       "Created interactive Tableau dashboards with KPIs to improve business reporting accuracy by 20%. Applied statistical techniques (hypothesis testing, ANOVA, chi-square) using Excel and Python to support data-driven strategies in an academic environment.",
