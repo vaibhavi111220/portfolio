@@ -349,7 +349,6 @@ export const projects: Project[] = [
   ],
   featured: true,
   githubUrl: "https://github.com/vaibhavi111220/Bank-Loan-Analysis",
-  imageUrl: "Bank-Loan-Analysis-using-PowerBI-main/Output/Summary.png",
   },
   {
     id: "8",
@@ -512,6 +511,7 @@ export const certifications = [
     url: "https://www.coursera.org/account/accomplishments/verify/BJCDXDCPQKHB",
   },
 ];
+
 
 
 
