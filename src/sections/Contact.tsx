@@ -67,12 +67,6 @@ const Contact: React.FC = () => {
       icon: "📧",
       color: "hover:text-red-400",
     },
-    {
-      name: "Phone",
-      url: `tel:${personalInfo.phone}`,
-      icon: "📱",
-      color: "hover:text-green-400",
-    },
   ];
 
   return (
@@ -278,3 +272,4 @@ const Contact: React.FC = () => {
 };
 
 export default Contact;
+
