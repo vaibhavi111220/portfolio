@@ -334,7 +334,7 @@ export const projects: Project[] = [
   ],
   featured: true,
   githubUrl: "https://github.com/vaibhavi111220/netflix--Power-BI-Dashboard",
-  }
+  },
   {
     id: "7",
     title: "Academic Performance Analytics",
@@ -484,4 +484,5 @@ export const certifications = [
     url: "https://www.coursera.org/account/accomplishments/verify/BJCDXDCPQKHB",
   },
 ];
+
 
