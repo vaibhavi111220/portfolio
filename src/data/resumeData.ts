@@ -59,8 +59,7 @@ export const personalInfo: PersonalInfo = {
   name: "Vaibhavi Satish",
   title: "Business & Data Analyst | Process Improvement ",
   email: "vaibhavisatish20@gmail.com",
-  phone: "(940) 843-3861",
-  location: "USA",
+  location: "USA / India",
   linkedin: "https://www.linkedin.com/in/vaibhavisatish/",
   github: "https://github.com/vaibhavi111220", // Assuming the same GitHub URL as before
   website: "https://vaibhavisatish1.wixsite.com/my-site",
@@ -485,3 +484,4 @@ export const certifications = [
     url: "https://www.coursera.org/account/accomplishments/verify/BJCDXDCPQKHB",
   },
 ];
+
