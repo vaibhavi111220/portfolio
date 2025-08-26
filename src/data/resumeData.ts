@@ -47,7 +47,7 @@ export interface PersonalInfo {
   name: string;
   title: string;
   email: string;
-  phone: string;
+  phone?: string;
   location: string;
   linkedin: string;
   github: string;
@@ -484,5 +484,6 @@ export const certifications = [
     url: "https://www.coursera.org/account/accomplishments/verify/BJCDXDCPQKHB",
   },
 ];
+
 
 
