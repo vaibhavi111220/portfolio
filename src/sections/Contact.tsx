@@ -117,16 +117,6 @@ const Contact: React.FC = () => {
               </div>
 
               <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-gradient-to-r from-secondary to-accent rounded-lg flex items-center justify-center">
-                  📱
-                </div>
-                <div>
-                  <p className="text-gray-400 text-sm">Phone</p>
-                  <p className="text-white font-medium">{personalInfo.phone}</p>
-                </div>
-              </div>
-
-              <div className="flex items-center space-x-4">
                 <div className="w-12 h-12 bg-gradient-to-r from-accent to-primary rounded-lg flex items-center justify-center">
                   📍
                 </div>
@@ -272,4 +262,5 @@ const Contact: React.FC = () => {
 };
 
 export default Contact;
+
 
