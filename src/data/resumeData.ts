@@ -336,7 +336,23 @@ export const projects: Project[] = [
   githubUrl: "https://github.com/vaibhavi111220/netflix--Power-BI-Dashboard",
   },
   {
-    id: "7",
+  id: "7",
+  title: "Bank Loan Analysis (Power BI)",
+  description:
+    "Developed interactive Power BI dashboards to analyze bank loan portfolios, providing insights on loan performance, borrower demographics, and financial trends. Includes Summary, Overview, and Details dashboards with KPIs such as loan applications, funded amounts, repayment performance, and risk indicators.",
+  technologies: [
+    "Power BI",
+    "DAX",
+    "Power Query",
+    "Data Visualization",
+    "Business Intelligence",
+  ],
+  featured: true,
+  githubUrl: "https://github.com/vaibhavi111220/Bank-Loan-Analysis",
+  imageUrl: "Bank-Loan-Analysis-using-PowerBI-main/Output/Summary.png",
+  },
+  {
+    id: "8",
     title: "Academic Performance Analytics",
     description:
       "Created interactive Tableau dashboards with KPIs to improve business reporting accuracy by 20%. Applied statistical techniques (hypothesis testing, ANOVA, chi-square) using Excel and Python to support data-driven strategies in an academic environment.",
@@ -448,6 +464,18 @@ export const skills: Skill[] = [
 
 export const certifications = [
   {
+    name: "Product Management: Building a Product Strategy",
+    issuer: "National Association of State Boards of Accountancy (NASBA)",
+    date: "2025",
+    url: "https://www.linkedin.com/learning/certificates/116f36b674fdd4a3cdb4337efb4c4fb02d525182b591a9576829b152160538fb?trk=share_certificate",
+  },
+  {
+    name: "Technical Product Management",
+    issuer: "PMI",
+    date: "2025",
+    url: "https://www.linkedin.com/learning/certificates/5c6dfb37e7b903d19a409a727255459c53e048caa667f59f7bd54520c4f39520?trk=share_certificate",
+  },
+  {
     name: "Product Management First Steps",
     issuer: "PMI",
     date: "2025",
@@ -479,11 +507,12 @@ export const certifications = [
   },
   {
     name: "Marketing Analytics",
-    issuer: "University Of Virginia",
+    issuer: "University of Virginia",
     date: "2024",
     url: "https://www.coursera.org/account/accomplishments/verify/BJCDXDCPQKHB",
   },
 ];
+
 
 
 
