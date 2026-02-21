@@ -27,16 +27,45 @@ const About: React.FC = () => {
                 I solve one specific problem: Healthcare data is overwhelming. Patients can't understand it. Companies struggle to use it. I build products that fix that.
               </p>
               <p className="text-lg text-gray-300 leading-relaxed">
-                My current focus is Arogya, an AI-powered health companion that turns complex lab reports into clear, actionable insights. 
-                Before that, I led product strategy for a HIPAA-compliant platform that improved data reliability by 95% and cut compliance errors by 30%.
-
+                My current focus is <span className="text-white font-medium">Arogya</span>, an AI-powered health companion that turns complex lab reports into clear, actionable insights. 
+                Before that, I led product strategy for a HIPAA-compliant platform that improved data reliability by <span className="text-white font-medium">95%</span> and cut compliance errors by <span className="text-white font-medium">30%</span>.
               </p>
-              <p className="text-lg text-gray-300 leading-relaxed">
-                How I work:
-                Resilience: I've moved countries, adapted to new cultures, and built products across healthcare, aviation, and finance. I deliver in unfamiliar environments.
-                Collaboration: I've never built anything alone—and I wouldn't want to. I partner with engineering, design, and stakeholders to find the best idea, not just mine.
-                Execution: I get it done. On time. With quality. No excuses.
-                Outside work: I trek (because the best views require effort), I paint (because details matter), and I play badminton (because I believe in winning—but never alone).
+
+              {/* How I work - Structured section */}
+              <div className="space-y-4 pt-2">
+                <h3 className="text-xl font-semibold text-white">How I work:</h3>
+                <ul className="space-y-3 text-gray-300">
+                  <li className="flex items-start">
+                    <span className="text-blue-400 mr-3 mt-1">•</span>
+                    <div>
+                      <span className="font-semibold text-white">Resilience:</span> I've moved countries, adapted to new cultures, and built products across healthcare, aviation, and finance. I deliver in unfamiliar environments.
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-blue-400 mr-3 mt-1">•</span>
+                    <div>
+                      <span className="font-semibold text-white">Collaboration:</span> I've never built anything alone—and I wouldn't want to. I partner with engineering, design, and stakeholders to find the best idea, not just mine.
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-blue-400 mr-3 mt-1">•</span>
+                    <div>
+                      <span className="font-semibold text-white">Execution:</span> I get it done. On time. With quality. No excuses.
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Outside work section */}
+              <div className="space-y-2">
+                <h3 className="text-xl font-semibold text-white">Outside work:</h3>
+                <p className="text-lg text-gray-300 leading-relaxed">
+                  I trek (because the best views require effort), I paint (because details matter), and I play badminton (because I believe in winning—but never alone).
+                </p>
+              </div>
+
+              {/* Call to action */}
+              <p className="text-lg text-gray-300 leading-relaxed pt-2 border-t border-gray-700/50">
                 I'm looking for a team that's building something that matters. If that's you, let's talk.
               </p>
               {/* Quick Facts */}
@@ -102,4 +131,5 @@ const About: React.FC = () => {
 };
 
 export default About;
+
 
