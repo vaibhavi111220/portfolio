@@ -64,7 +64,7 @@ export const personalInfo: PersonalInfo = {
   github: "https://github.com/vaibhavi111220", // Assuming the same GitHub URL as before
   website: "https://vaibhavisatish1.wixsite.com/my-site",
   summary:
-    "Turning complex data into compelling stories is my specialty. With over 3 years in Data & Business Analytics, I've crafted insights that improved operational efficiency by 20% in healthcare analytics and streamlined financial reporting processes across aviation and financial sectors across healthcare, aviation, and financial sectors. Now, I'm channeling this passion into Product Management, aiming to create data-powered products that resonate with users. My journey is about bridging numbers and narratives—let's build something impactful together!",
+    "I build AI-powered products that make healthcare data human. Currently creating Arogya, an AI health companion that turns complex lab reports into clear, actionable insights. With 3+ years in data and product analytics, I've led HIPAA-compliant platforms, improved data reliability by 95%, and reduced manual workflows by 40% using LLMs. My sweet spot? Bridging the gap between what the numbers say and what users actually need. Let's build something that matters.",
 };
 
 export const experiences: Experience[] = [
@@ -511,6 +511,7 @@ export const certifications = [
     url: "https://www.coursera.org/account/accomplishments/verify/BJCDXDCPQKHB",
   },
 ];
+
 
 
 
