@@ -57,9 +57,9 @@ export interface PersonalInfo {
 
 export const personalInfo: PersonalInfo = {
   name: "Vaibhavi Satish",
-  title: "Business & Data Analyst | Process Improvement ",
-  email: "vaibhavisatish20@gmail.com",
-  location: "USA / India",
+  title: "Data strategist. Product thinker. AI optimist.",
+  email: "vaibhavisatish1@gmail.com",
+  location: "India",
   linkedin: "https://www.linkedin.com/in/vaibhavisatish/",
   github: "https://github.com/vaibhavi111220", // Assuming the same GitHub URL as before
   website: "https://vaibhavisatish1.wixsite.com/my-site",
@@ -511,6 +511,7 @@ export const certifications = [
     url: "https://www.coursera.org/account/accomplishments/verify/BJCDXDCPQKHB",
   },
 ];
+
 
 
 
