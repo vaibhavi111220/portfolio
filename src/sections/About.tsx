@@ -24,28 +24,20 @@ const About: React.FC = () => {
               className="space-y-6"
             >
               <p className="text-lg text-gray-300 leading-relaxed">
-                As a Data & Business Analyst transitioning into Product
-                Management, I thrive at the intersection of data, technology,
-                and user experience. My expertise spans machine learning,
-                business intelligence, and analytics, utilizing tools such as
-                SQL, Python, Power BI, and Tableau to pinpoint opportunities and
-                solve intricate challenges. I excel at collaborating with
-                stakeholders and cross-functional teams to design streamlined,
-                intuitive product solutions aligned with strategic objectives.
+                I solve one specific problem: Healthcare data is overwhelming. Patients can't understand it. Companies struggle to use it. I build products that fix that.
               </p>
               <p className="text-lg text-gray-300 leading-relaxed">
-                I’m dedicated to delivering meaningful, user-focused digital
-                solutions through meticulous problem-solving, workflow
-                automation, and continuous optimization. With certifications and
-                hands-on experience across various sectors, my goal is to create
-                innovative products that not only meet business goals but also
-                enrich user experiences.
+                My current focus is Arogya, an AI-powered health companion that turns complex lab reports into clear, actionable insights. 
+                Before that, I led product strategy for a HIPAA-compliant platform that improved data reliability by 95% and cut compliance errors by 30%.
+
               </p>
               <p className="text-lg text-gray-300 leading-relaxed">
-                When I'm not immersed in projects, you'll find me experimenting
-                with new tech, contributing to open-source projects, attending
-                local tech meetups, or exploring the latest trends in
-                digital innovation.
+                How I work:
+                Resilience: I've moved countries, adapted to new cultures, and built products across healthcare, aviation, and finance. I deliver in unfamiliar environments.
+                Collaboration: I've never built anything alone—and I wouldn't want to. I partner with engineering, design, and stakeholders to find the best idea, not just mine.
+                Execution: I get it done. On time. With quality. No excuses.
+                Outside work: I trek (because the best views require effort), I paint (because details matter), and I play badminton (because I believe in winning—but never alone).
+                I'm looking for a team that's building something that matters. If that's you, let's talk.
               </p>
               {/* Quick Facts */}
               <div className="grid grid-cols-2 gap-6 pt-6">
@@ -110,3 +102,4 @@ const About: React.FC = () => {
 };
 
 export default About;
+
