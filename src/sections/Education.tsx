@@ -11,18 +11,18 @@ const EducationCard: React.FC<{
   return (
     <div
       ref={cardRef as React.RefObject<HTMLDivElement>}
-      className="glass-effect p-6 rounded-xl hover:shadow-lg hover:shadow-secondary/10 transition-all duration-300 transform hover:-translate-y-1"
+      className="p-6 rounded-xl border border-accent-blue/30 bg-white/40 backdrop-blur-sm hover:border-accent-coral/50 hover:shadow-lg transition-all duration-300"
       style={{ animationDelay: `${index * 200}ms` }}
     >
       <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-4">
         <div className="flex-1">
-          <h3 className="text-xl font-bold text-white mb-2">{edu.degree}</h3>
-          <p className="text-secondary font-semibold mb-1">{edu.institution}</p>
-          <p className="text-gray-400 text-sm mb-2">{edu.location}</p>
-          {edu.gpa && <p className="text-accent font-medium">GPA: {edu.gpa}</p>}
+          <h3 className="text-xl font-bold text-text-primary mb-2">{edu.degree}</h3>
+          <p className="text-accent-coral font-semibold mb-1">{edu.institution}</p>
+          <p className="text-text-secondary text-sm mb-2">{edu.location}</p>
+          {edu.gpa && <p className="text-accent-coral font-medium">GPA: {edu.gpa}</p>}
         </div>
         <div className="mt-2 sm:mt-0 sm:ml-4">
-          <span className="inline-block px-3 py-1 bg-gradient-to-r from-secondary/20 to-accent/20 text-secondary text-sm rounded-full border border-secondary/30">
+          <span className="inline-block px-3 py-1 bg-accent-blue/20 text-accent-coral text-sm rounded-full border border-accent-blue/40">
             {edu.startDate} - {edu.endDate}
           </span>
         </div>
@@ -31,16 +31,16 @@ const EducationCard: React.FC<{
       {/* Achievements */}
       {edu.achievements && edu.achievements.length > 0 && (
         <div className="mt-4">
-          <h4 className="text-sm font-semibold text-gray-300 mb-2">
+          <h4 className="text-sm font-semibold text-text-primary mb-2">
             Achievements:
           </h4>
           <div className="space-y-1">
             {edu.achievements.map((achievement, achievementIndex) => (
               <p
                 key={achievementIndex}
-                className="text-gray-400 text-sm flex items-start"
+                className="text-text-secondary text-sm flex items-start"
               >
-                <span className="text-secondary mr-2 mt-0.5 text-xs">★</span>
+                <span className="text-accent-coral mr-2 mt-0.5 text-xs">★</span>
                 {achievement}
               </p>
             ))}
@@ -55,25 +55,23 @@ const Education: React.FC = () => {
   const titleRef = useScrollAnimation("education", "fadeUp");
 
   return (
-    <section id="education" className="section-padding bg-gray-900/50">
-      <div className="container-custom">
+    <section id="education" className="py-20 sm:py-28 bg-white/30">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2
             ref={titleRef as React.RefObject<HTMLHeadingElement>}
-            className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6"
+            className="text-4xl sm:text-5xl font-bold mb-6 text-text-primary"
           >
-            <span className="gradient-text">Education</span>
+            Education
           </h2>
-          <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-            My academic background and the foundation that has shaped my
-            technical expertise and problem-solving abilities in software
-            development.
+          <p className="text-lg text-text-secondary max-w-2xl mx-auto">
+            My academic background across business analytics and computer science,
+            providing the foundation for my technical expertise and strategic thinking.
           </p>
         </div>
         {/* Education Grid */}
         <div className="max-w-4xl mx-auto">
-          {" "}
           {education.length > 0 ? (
             <div className="grid gap-8">
               {education.map((edu, index) => (
@@ -82,17 +80,16 @@ const Education: React.FC = () => {
             </div>
           ) : (
             <div className="text-center py-12">
-              <div className="glass-effect p-8 rounded-xl max-w-md mx-auto">
+              <div className="p-8 rounded-xl max-w-md mx-auto border border-accent-blue/30">
                 <div className="text-6xl mb-4">🎓</div>
-                <h3 className="text-xl font-bold text-white mb-2">Education</h3>
-                <p className="text-gray-400">
+                <h3 className="text-xl font-bold text-text-primary mb-2">Education</h3>
+                <p className="text-text-secondary">
                   Education details will be displayed here.
                 </p>
               </div>
             </div>
           )}
-        </div>{" "}
-        {/* Certifications are moved to their own section */}
+        </div>
       </div>
     </section>
   );

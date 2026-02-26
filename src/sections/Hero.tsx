@@ -48,33 +48,40 @@ const Hero: React.FC = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-background"
     >
-      <div className="container-custom text-center z-10">
+      <div className="container-custom text-center z-10 px-6">
         <div className="max-w-4xl mx-auto">
           {/* Main Title */}
           <h1
             ref={titleRef}
-            className="text-4xl sm:text-6xl lg:text-7xl font-bold mb-6 opacity-0"
+            className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 text-text-primary opacity-0"
           >
-            Hi, I'm{" "}
-            <span className="gradient-text">
-              {personalInfo.name.split(" ")[0]}
-            </span>
+            Vaibhavi Satish
           </h1>
 
-          {/* Subtitle */}
+          {/* Main Subtitle */}
           <p
             ref={subtitleRef}
-            className="text-xl sm:text-2xl lg:text-3xl text-gray-300 mb-8 opacity-0"
+            className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-accent-coral mb-4 opacity-0"
           >
-            {personalInfo.title}
+            I build AI products that make healthcare human.
           </p>
 
-          {/* Description */}
-          <p className="text-lg sm:text-xl text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed">
-            {personalInfo.summary}
+          {/* Role Description */}
+          <p className="text-lg sm:text-xl text-text-secondary mb-8 opacity-0">
+            Product Strategist · Data Analytics Leader · AI Innovator
           </p>
+
+          {/* Metrics */}
+          <div className="text-text-secondary text-sm sm:text-base mb-12 opacity-0">
+            <p>
+              <span className="font-semibold text-accent-coral">95%</span> data
+              reliability · <span className="font-semibold text-accent-coral">40%</span> faster workflows ·{" "}
+              <span className="font-semibold text-accent-coral">20%</span> readmission
+              reduction
+            </p>
+          </div>
 
           {/* CTA Buttons */}
           <div
@@ -83,9 +90,9 @@ const Hero: React.FC = () => {
           >
             <button
               onClick={() => scrollToSection("projects")}
-              className="group px-8 py-4 bg-gradient-to-r from-primary to-secondary text-white font-semibold rounded-full hover:shadow-lg hover:shadow-primary/25 transform hover:scale-105 transition-all duration-300"
+              className="group px-8 py-3 bg-accent-coral text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-accent-coral/30 transform hover:scale-105 transition-all duration-300"
             >
-              View My Work
+              View Work
               <span className="inline-block ml-2 transform group-hover:translate-x-1 transition-transform duration-300">
                 →
               </span>
@@ -93,26 +100,33 @@ const Hero: React.FC = () => {
 
             <button
               onClick={handleDownloadResume}
-              className="px-8 py-4 border-2 border-gray-400 text-gray-300 font-semibold rounded-full hover:border-white hover:text-white hover:shadow-lg transform hover:scale-105 transition-all duration-300"
+              className="px-8 py-3 border-2 border-accent-coral text-accent-coral font-semibold rounded-lg hover:bg-accent-coral hover:text-white hover:shadow-lg transform hover:scale-105 transition-all duration-300"
             >
               Download Resume
+            </button>
+
+            <button
+              onClick={() => scrollToSection("contact")}
+              className="px-8 py-3 border-2 border-accent-blue text-accent-blue font-semibold rounded-lg hover:bg-accent-blue hover:text-text-primary hover:shadow-lg transform hover:scale-105 transition-all duration-300"
+            >
+              Let's Talk
             </button>
           </div>
 
           {/* Scroll Indicator */}
           <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center">
-              <div className="w-1 h-3 bg-gray-400 rounded-full mt-2 animate-pulse"></div>
+            <div className="w-6 h-10 border-2 border-text-secondary rounded-full flex justify-center">
+              <div className="w-1 h-3 bg-text-secondary rounded-full mt-2 animate-pulse"></div>
             </div>
-            <p className="text-sm text-gray-400 mt-2">Scroll Down</p>
+            <p className="text-sm text-text-secondary mt-2">Scroll Down</p>
           </div>
         </div>
       </div>
 
       {/* Floating Elements */}
-      <div className="absolute top-20 left-10 w-20 h-20 border border-primary/30 rounded-full animate-float"></div>
-      <div className="absolute top-40 right-20 w-16 h-16 border border-secondary/30 rounded-full animate-float animation-delay-200"></div>
-      <div className="absolute bottom-40 left-20 w-12 h-12 border border-accent/30 rounded-full animate-float animation-delay-400"></div>
+      <div className="absolute top-20 left-10 w-20 h-20 border border-accent-coral/20 rounded-full animate-float"></div>
+      <div className="absolute top-40 right-20 w-16 h-16 border border-accent-blue/20 rounded-full animate-float animation-delay-200"></div>
+      <div className="absolute bottom-40 left-20 w-12 h-12 border border-accent-coral/20 rounded-full animate-float animation-delay-400"></div>
     </section>
   );
 };

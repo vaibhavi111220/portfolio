@@ -4,19 +4,28 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#0ea5e9",
-        secondary: "#8b5cf6",
-        accent: "#f59e0b",
-        dark: "#0f172a",
-        light: "#f8fafc",
+        // New color palette: Soft Blush & Charcoal
+        background: "#FDF6F0",
+        "text-primary": "#2D2D2D",
+        "text-secondary": "#5A5A5A",
+        "accent-coral": "#FF8A7A",
+        "accent-blue": "#A8D5E5",
+        // Legacy support
+        primary: "#FF8A7A",
+        secondary: "#A8D5E5",
+        accent: "#FF8A7A",
+        dark: "#2D2D2D",
+        light: "#FDF6F0",
       },
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],
+        display: ["Clash Display", "Cabinet Grotesk", "system-ui", "sans-serif"],
         mono: ["JetBrains Mono", "monospace"],
       },
       animation: {
         float: "float 6s ease-in-out infinite",
         gradient: "gradient 15s ease infinite",
+        fadeUp: "fadeUp 0.6s ease-out",
       },
       keyframes: {
         float: {
@@ -33,9 +42,14 @@ module.exports = {
             "background-position": "right center",
           },
         },
+        fadeUp: {
+          "0%": { opacity: "0", transform: "translateY(20px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-coral-cream": "linear-gradient(135deg, #FFD9D0, #FFF0E5)",
       },
     },
   },

@@ -10,57 +10,51 @@ const ProjectCard: React.FC<{ project: Project; index: number }> = ({
   return (
     <div
       ref={cardRef as React.RefObject<HTMLDivElement>}
-      className="glass-effect p-6 rounded-xl hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 transform hover:-translate-y-2 group"
+      className="p-6 rounded-xl border border-accent-blue/30 bg-white/40 backdrop-blur-sm hover:border-accent-coral/50 hover:shadow-lg transition-all duration-300 group"
       style={{ animationDelay: `${index * 200}ms` }}
     >
       {/* Project Image */}
-      <div className="w-full h-48 bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg mb-4 overflow-hidden relative">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20"></div>
+      <div className="w-full h-48 bg-gradient-coral-cream rounded-lg mb-4 overflow-hidden relative">
+        <div className="absolute inset-0 bg-gradient-to-br from-accent-coral/10 via-accent-blue/10 to-transparent"></div>
         {project.imageUrl ? (
           <img
             src={project.imageUrl}
             alt={project.title}
-            className="w-full h-full object-cover object-center opacity-70 hover:opacity-100 transition-opacity duration-300"
+            className="w-full h-full object-cover object-center opacity-80 hover:opacity-100 transition-opacity duration-300"
             onError={(e) => {
-              // Fallback if image fails to load
               const target = e.target as HTMLImageElement;
               target.src = "";
               target.classList.add("flex", "items-center", "justify-center");
-              target.parentElement?.classList.add(
-                "flex",
-                "items-center",
-                "justify-center"
-              );
-              const emoji = document.createTextNode("🚀");
-              target.parentElement?.appendChild(emoji);
             }}
           />
         ) : (
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="text-4xl opacity-60">🚀</div>
+            <div className="text-4xl opacity-40">🚀</div>
           </div>
         )}
         {project.featured && (
-          <div className="absolute top-3 right-3 bg-gradient-to-r from-primary to-secondary text-white text-xs px-2 py-1 rounded-full">
-            Featured
+          <div className="absolute top-3 right-3 bg-accent-coral text-white text-xs px-3 py-1 rounded-full flex items-center gap-1">
+            ⭐ Featured
           </div>
         )}
       </div>
 
       {/* Project Content */}
       <div className="space-y-4">
-        <h3 className="text-xl font-bold text-white group-hover:text-primary transition-colors duration-300">
+        <h3 className="text-lg font-bold text-text-primary group-hover:text-accent-coral transition-colors duration-300">
           {project.title}
         </h3>
 
-        <p className="text-gray-400 leading-relaxed">{project.description}</p>
+        <p className="text-text-secondary text-sm leading-relaxed">
+          {project.description}
+        </p>
 
         {/* Technologies */}
         <div className="flex flex-wrap gap-2">
           {project.technologies.map((tech, techIndex) => (
             <span
               key={techIndex}
-              className="px-3 py-1 bg-gray-800/50 text-primary text-sm rounded-full border border-primary/20"
+              className="px-2 py-1 bg-accent-blue/20 text-text-primary text-xs rounded-full border border-accent-blue/40"
             >
               {tech}
             </span>
@@ -68,16 +62,15 @@ const ProjectCard: React.FC<{ project: Project; index: number }> = ({
         </div>
 
         {/* Links */}
-        <div className="flex space-x-4 pt-4">
+        <div className="flex gap-4 pt-4">
           {project.githubUrl && (
             <a
               href={project.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors duration-300"
+              className="text-text-secondary hover:text-accent-coral transition-colors duration-300 text-sm font-medium"
             >
-              <span>🔗</span>
-              <span>GitHub</span>
+              GitHub →
             </a>
           )}
           {project.liveUrl && (
@@ -85,10 +78,9 @@ const ProjectCard: React.FC<{ project: Project; index: number }> = ({
               href={project.liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center space-x-2 text-gray-400 hover:text-primary transition-colors duration-300"
+              className="text-text-secondary hover:text-accent-coral transition-colors duration-300 text-sm font-medium"
             >
-              <span>🌐</span>
-              <span>Live Demo</span>
+              Demo →
             </a>
           )}
         </div>
@@ -105,40 +97,38 @@ const Projects: React.FC = () => {
     filter === "all" ? projects : projects.filter((p) => p.featured);
 
   return (
-    <section id="projects" className="section-padding">
-      <div className="container-custom">
+    <section id="projects" className="py-20 sm:py-28 bg-background">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2
             ref={titleRef as React.RefObject<HTMLHeadingElement>}
-            className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6"
+            className="text-4xl sm:text-5xl font-bold mb-6 text-text-primary"
           >
-            My <span className="gradient-text">Projects</span>
+            Featured Work
           </h2>
-          <p className="text-lg text-gray-400 max-w-2xl mx-auto mb-8">
-            Here are some of the projects I've worked on. Each one represents a
-            unique challenge and showcases different aspects of my development
-            skills.
+          <p className="text-lg text-text-secondary max-w-2xl mx-auto mb-8">
+            A selection of projects that showcase my expertise in product strategy, data analytics, and AI-driven solutions.
           </p>
 
           {/* Filter Buttons */}
-          <div className="flex justify-center space-x-4">
+          <div className="flex justify-center gap-4">
             <button
               onClick={() => setFilter("all")}
-              className={`px-6 py-2 rounded-full transition-all duration-300 ${
+              className={`px-6 py-2 rounded-lg transition-all duration-300 ${
                 filter === "all"
-                  ? "bg-gradient-to-r from-primary to-secondary text-white"
-                  : "bg-gray-800 text-gray-400 hover:text-white"
+                  ? "bg-accent-coral text-white"
+                  : "border border-accent-blue/30 text-text-secondary hover:text-accent-coral"
               }`}
             >
               All Projects
             </button>
             <button
               onClick={() => setFilter("featured")}
-              className={`px-6 py-2 rounded-full transition-all duration-300 ${
+              className={`px-6 py-2 rounded-lg transition-all duration-300 ${
                 filter === "featured"
-                  ? "bg-gradient-to-r from-primary to-secondary text-white"
-                  : "bg-gray-800 text-gray-400 hover:text-white"
+                  ? "bg-accent-coral text-white"
+                  : "border border-accent-blue/30 text-text-secondary hover:text-accent-coral"
               }`}
             >
               Featured
@@ -147,19 +137,19 @@ const Projects: React.FC = () => {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {filteredProjects.map((project, index) => (
             <ProjectCard key={project.id} project={project} index={index} />
           ))}
         </div>
 
         {/* View More Button */}
-        <div className="text-center mt-12">
+        <div className="text-center">
           <a
-            href={`https://github.com/${personalInfo.github.split("/").pop()}`}
+            href={personalInfo.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center space-x-2 px-8 py-4 border-2 border-primary text-primary font-semibold rounded-full hover:bg-primary hover:text-white transition-all duration-300 transform hover:scale-105"
+            className="inline-flex items-center gap-2 px-8 py-3 border-2 border-accent-coral text-accent-coral font-semibold rounded-lg hover:bg-accent-coral hover:text-white transition-all duration-300 transform hover:scale-105"
           >
             <span>View More on GitHub</span>
             <span>→</span>

@@ -13,7 +13,10 @@ import ThreeBackground from "./components/ThreeBackground";
 // Sections
 import Hero from "./sections/Hero";
 import About from "./sections/About";
+import OperatingPrinciples from "./sections/OperatingPrinciples";
 import Projects from "./sections/Projects";
+import LinkedInFeed from "./sections/LinkedInFeed";
+import Metrics from "./sections/Metrics";
 import Skills from "./sections/Skills";
 import Experience from "./sections/Experience";
 import Education from "./sections/Education";
@@ -73,23 +76,31 @@ const App: React.FC = () => {
       <main className="main-content relative z-10">
         <Hero />
         <About />
+        <OperatingPrinciples />
         <Projects />
+        <LinkedInFeed />
+        <Metrics />
         <Skills />
         <Experience />
         <Education />
         <Certifications />
         <Contact />
       </main>
-      {/* Footer */}{" "}
-      <footer className="relative z-10 bg-gray-900/80 backdrop-blur-lg border-t border-gray-800">
-        <div className="container-custom">
-          <div className="py-8 text-center">
-            <p className="text-gray-400 mb-4">
-              © 2025 Vaibhavi Satish. All rights reserved.
+      {/* Footer */}
+      <footer className="relative z-10 bg-background border-t border-text-secondary/20">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+          <div className="py-16 text-center">
+            <p className="text-lg italic text-text-secondary mb-6">
+              "Currently accepting problems that need 3 parts data, 2 parts empathy, and 1 part creative rebellion."
             </p>
-            <p className="text-sm text-gray-500">
-              Built with React, Tailwind CSS, and GSAP
-            </p>
+            <div className="border-t border-text-secondary/20 pt-8">
+              <p className="text-text-secondary mb-2">
+                © 2026 Vaibhavi Satish. All rights reserved.
+              </p>
+              <p className="text-sm text-text-secondary/70">
+                Built with React, Vite, Tailwind CSS, and GSAP
+              </p>
+            </div>
           </div>
         </div>
       </footer>
