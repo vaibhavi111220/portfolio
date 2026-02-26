@@ -53,7 +53,6 @@ export interface PersonalInfo {
   github: string;
   website?: string;
   summary: string;
-  summary: "Passionate Business/Data Analyst with experience in analytics, AI-driven insights, and product thinking."
 }
 
 export const personalInfo: PersonalInfo = {
@@ -64,7 +63,7 @@ export const personalInfo: PersonalInfo = {
   linkedin: "https://www.linkedin.com/in/vaibhavisatish/",
   github: "https://github.com/vaibhavi111220", // Assuming the same GitHub URL as before
   website: "https://vaibhavisatish1.wixsite.com/my-site",
-  
+  summary: "Passionate Business/Data Analyst with experience in analytics, AI-driven insights, and product thinking.",
 };
 
 export const experiences: Experience[] = [
