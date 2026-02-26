@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
-import { personalInfo } from "../data/resumeData";
 import { useSmoothScroll } from "../hooks/useSmoothScroll";
 
 const Hero: React.FC = () => {

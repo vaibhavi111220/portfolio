@@ -53,6 +53,7 @@ export interface PersonalInfo {
   github: string;
   website?: string;
   summary: string;
+  summary: "Passionate Business/Data Analyst with experience in analytics, AI-driven insights, and product thinking."
 }
 
 export const personalInfo: PersonalInfo = {
