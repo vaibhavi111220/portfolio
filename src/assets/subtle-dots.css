@@ -1,0 +1,10 @@
+/* The subtle-dots.css file creates a proper background pattern with dots */
+.bg-subtle-dots {
+  background-image: radial-gradient(
+      circle at 1px 1px,
+      #ffffff22 1px,
+      transparent 1px
+    ),
+    radial-gradient(circle at 19px 19px, #ffffff22 1px, transparent 1px);
+  background-size: 20px 20px;
+}
